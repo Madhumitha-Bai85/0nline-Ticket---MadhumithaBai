@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎬 Online Movie Ticket Booking</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#booking">Book Tickets</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>Welcome to Movie Booking</h2>
+    <p>Book your favourite movie tickets online!</p>
+    <a href="#movies" class="btn">Explore Movies</a>
+</section>
+
+<section id="movies">
+    <h2>Available Movies</h2>
+
+    <div class="movie-container">
+
+        <div class="movie-card">
+            <img src="https://image.tmdb.org/t/p/w500/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg">
+            <h3>Pushpa 2</h3>
+            <p>Language: Telugu</p>
+            <p>Duration: 200 Minutes</p>
+            <button onclick="selectMovie('Pushpa 2')">Book Now</button>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://image.tmdb.org/t/p/w500/wE0I6efAW4cDDmZQWtwZMOW44EJ.jpg">
+            <h3>RRR</h3>
+            <p>Language: Telugu</p>
+            <p>Duration: 187 Minutes</p>
+            <button onclick="selectMovie('RRR')">Book Now</button>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://image.tmdb.org/t/p/w500/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg">
+            <h3>Kalki 2898 AD</h3>
+            <p>Language: Telugu</p>
+            <p>Duration: 181 Minutes</p>
+            <button onclick="selectMovie('Kalki 2898 AD')">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="booking">
+    <h2>Book Your Tickets</h2>
+
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Enter Your Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+
+        <select id="movie" required>
+            <option value="">Select Movie</option>
+            <option>Pushpa 2</option>
+            <option>RRR</option>
+            <option>Kalki 2898 AD</option>
+        </select>
+
+        <select id="theatre" required>
+            <option value="">Select Theatre</option>
+            <option>PVR Cinemas</option>
+            <option>INOX Cinemas</option>
+        </select>
+
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+
+        <input type="number" id="seats"
+               placeholder="Number of Seats" min="1" max="10" required>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <div id="result"></div>
+</section>
+
+<footer>
+    <p>© 2026 Online Movie Ticket Booking System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
